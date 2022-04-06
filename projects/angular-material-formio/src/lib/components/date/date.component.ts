@@ -87,7 +87,7 @@ export class MaterialDateComponent extends MaterialComponent {
   }
 
   setDisplayControlValue(value = null) {
-    const format = `YYYY-MM-DD${this.enableTime ? 'THH:mm' : ''}`;
+    const format = `MM/DD/YYYY${this.enableTime ? 'THH:mm' : ''}`;
     value = value || this.getDateTimeValue();
 
     if (value) {
@@ -253,8 +253,8 @@ export class MaterialDateComponent extends MaterialComponent {
   }
 
   disableDates(dates: Array<string>, d: Date) {
-    const formattedDates = dates.map((date) => momentDate(date).format('YYYY-MM-DD'));
-    return !formattedDates.includes(momentDate(d).format('YYYY-MM-DD'));
+    const formattedDates = dates.map((date) => momentDate(date).format('MM/DD/YYYY'));
+    return !formattedDates.includes(momentDate(d).format('MM/DD/YYYY'));
   }
 
   dateFilter = (d: Date | null): boolean => {
@@ -270,11 +270,11 @@ export class MaterialDateComponent extends MaterialComponent {
 
   improveMinMaxDate(minDate, maxDate) {
     if (minDate && minDate.length === 4) {
-      minDate = momentDate(`${minDate}-01-01`).format('YYYY-MM-DD');
+      minDate = momentDate(`${minDate}-01-01`).format('MM/DD/YYYY');
     }
 
     if (maxDate && maxDate.length === 4) {
-      maxDate = momentDate(`${maxDate}-01-01`).subtract(1, 'day').format('YYYY-MM-DD');
+      maxDate = momentDate(`${maxDate}-01-01`).subtract(1, 'day').format('MM/DD/YYYY');
     }
     return {minDate, maxDate};
   }
