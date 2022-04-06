@@ -1,0 +1,14 @@
+import { Component } from '@angular/core';
+import { MaterialComponent } from '../MaterialComponent';
+import ContentComponent from 'formiojs/components/content/Content.js';
+export class MaterialContentComponent extends MaterialComponent {
+}
+MaterialContentComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'mat-formio-content',
+                template: `<div [innerHTML]="instance.content"></div>`
+            },] }
+];
+ContentComponent.MaterialComponent = MaterialContentComponent;
+export { ContentComponent };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29udGVudC5jb21wb25lbnQuanMiLCJzb3VyY2VSb290IjoiLi4vLi4vcHJvamVjdHMvYW5ndWxhci1tYXRlcmlhbC1mb3JtaW8vc3JjLyIsInNvdXJjZXMiOlsibGliL2NvbXBvbmVudHMvY29udGVudC9jb250ZW50LmNvbXBvbmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQzFDLE9BQU8sRUFBRSxpQkFBaUIsRUFBRSxNQUFNLHNCQUFzQixDQUFDO0FBQ3pELE9BQU8sZ0JBQWdCLE1BQU0sd0NBQXdDLENBQUM7QUFLdEUsTUFBTSxPQUFPLHdCQUF5QixTQUFRLGlCQUFpQjs7O1lBSjlELFNBQVMsU0FBQztnQkFDVCxRQUFRLEVBQUUsb0JBQW9CO2dCQUM5QixRQUFRLEVBQUUsNENBQTRDO2FBQ3ZEOztBQUVELGdCQUFnQixDQUFDLGlCQUFpQixHQUFHLHdCQUF3QixDQUFDO0FBQzlELE9BQU8sRUFBRSxnQkFBZ0IsRUFBRSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBNYXRlcmlhbENvbXBvbmVudCB9IGZyb20gJy4uL01hdGVyaWFsQ29tcG9uZW50JztcbmltcG9ydCBDb250ZW50Q29tcG9uZW50IGZyb20gJ2Zvcm1pb2pzL2NvbXBvbmVudHMvY29udGVudC9Db250ZW50LmpzJztcbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ21hdC1mb3JtaW8tY29udGVudCcsXG4gIHRlbXBsYXRlOiBgPGRpdiBbaW5uZXJIVE1MXT1cImluc3RhbmNlLmNvbnRlbnRcIj48L2Rpdj5gXG59KVxuZXhwb3J0IGNsYXNzIE1hdGVyaWFsQ29udGVudENvbXBvbmVudCBleHRlbmRzIE1hdGVyaWFsQ29tcG9uZW50IHt9XG5Db250ZW50Q29tcG9uZW50Lk1hdGVyaWFsQ29tcG9uZW50ID0gTWF0ZXJpYWxDb250ZW50Q29tcG9uZW50O1xuZXhwb3J0IHsgQ29udGVudENvbXBvbmVudCB9O1xuIl19

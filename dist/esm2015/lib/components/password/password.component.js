@@ -1,0 +1,18 @@
+import { Component } from '@angular/core';
+import { MaterialTextfieldComponent, TEXTFIELD_TEMPLATE } from '../textfield/textfield.component';
+import PasswordComponent from 'formiojs/components/password/Password.js';
+export class MaterialPasswordComponent extends MaterialTextfieldComponent {
+    constructor() {
+        super(...arguments);
+        this.inputType = 'password';
+    }
+}
+MaterialPasswordComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'mat-formio-password',
+                template: TEXTFIELD_TEMPLATE
+            },] }
+];
+PasswordComponent.MaterialComponent = MaterialPasswordComponent;
+export { PasswordComponent };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGFzc3dvcmQuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6Ii4uLy4uL3Byb2plY3RzL2FuZ3VsYXItbWF0ZXJpYWwtZm9ybWlvL3NyYy8iLCJzb3VyY2VzIjpbImxpYi9jb21wb25lbnRzL3Bhc3N3b3JkL3Bhc3N3b3JkLmNvbXBvbmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQzFDLE9BQU8sRUFBRSwwQkFBMEIsRUFBRSxrQkFBa0IsRUFBRSxNQUFNLGtDQUFrQyxDQUFDO0FBQ2xHLE9BQU8saUJBQWlCLE1BQU0sMENBQTBDLENBQUM7QUFLekUsTUFBTSxPQUFPLHlCQUEwQixTQUFRLDBCQUEwQjtJQUp6RTs7UUFLUyxjQUFTLEdBQUcsVUFBVSxDQUFDO0lBQ2hDLENBQUM7OztZQU5BLFNBQVMsU0FBQztnQkFDVCxRQUFRLEVBQUUscUJBQXFCO2dCQUMvQixRQUFRLEVBQUUsa0JBQWtCO2FBQzdCOztBQUlELGlCQUFpQixDQUFDLGlCQUFpQixHQUFHLHlCQUF5QixDQUFDO0FBQ2hFLE9BQU8sRUFBRSxpQkFBaUIsRUFBRSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBNYXRlcmlhbFRleHRmaWVsZENvbXBvbmVudCwgVEVYVEZJRUxEX1RFTVBMQVRFIH0gZnJvbSAnLi4vdGV4dGZpZWxkL3RleHRmaWVsZC5jb21wb25lbnQnO1xuaW1wb3J0IFBhc3N3b3JkQ29tcG9uZW50IGZyb20gJ2Zvcm1pb2pzL2NvbXBvbmVudHMvcGFzc3dvcmQvUGFzc3dvcmQuanMnO1xuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnbWF0LWZvcm1pby1wYXNzd29yZCcsXG4gIHRlbXBsYXRlOiBURVhURklFTERfVEVNUExBVEVcbn0pXG5leHBvcnQgY2xhc3MgTWF0ZXJpYWxQYXNzd29yZENvbXBvbmVudCBleHRlbmRzIE1hdGVyaWFsVGV4dGZpZWxkQ29tcG9uZW50IHtcbiAgcHVibGljIGlucHV0VHlwZSA9ICdwYXNzd29yZCc7XG59XG5QYXNzd29yZENvbXBvbmVudC5NYXRlcmlhbENvbXBvbmVudCA9IE1hdGVyaWFsUGFzc3dvcmRDb21wb25lbnQ7XG5leHBvcnQgeyBQYXNzd29yZENvbXBvbmVudCB9O1xuIl19

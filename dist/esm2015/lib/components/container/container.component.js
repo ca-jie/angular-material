@@ -1,0 +1,17 @@
+import { Component } from '@angular/core';
+import { MaterialNestedComponent } from '../MaterialNestedComponent';
+import ContainerComponent from 'formiojs/components/container/Container.js';
+export class MaterialContainerComponent extends MaterialNestedComponent {
+}
+MaterialContainerComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'mat-formio-container',
+                template: `
+    <div fxLayout="column" fxLayoutGap="1em">
+      <ng-template #components></ng-template>
+    </div>`
+            },] }
+];
+ContainerComponent.MaterialComponent = MaterialContainerComponent;
+export { ContainerComponent };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29udGFpbmVyLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiIuLi8uLi9wcm9qZWN0cy9hbmd1bGFyLW1hdGVyaWFsLWZvcm1pby9zcmMvIiwic291cmNlcyI6WyJsaWIvY29tcG9uZW50cy9jb250YWluZXIvY29udGFpbmVyLmNvbXBvbmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQzFDLE9BQU8sRUFBRSx1QkFBdUIsRUFBRSxNQUFNLDRCQUE0QixDQUFDO0FBQ3JFLE9BQU8sa0JBQWtCLE1BQU0sNENBQTRDLENBQUM7QUFRNUUsTUFBTSxPQUFPLDBCQUEyQixTQUFRLHVCQUF1Qjs7O1lBUHRFLFNBQVMsU0FBQztnQkFDVCxRQUFRLEVBQUUsc0JBQXNCO2dCQUNoQyxRQUFRLEVBQUU7OztXQUdEO2FBQ1Y7O0FBRUQsa0JBQWtCLENBQUMsaUJBQWlCLEdBQUcsMEJBQTBCLENBQUM7QUFDbEUsT0FBTyxFQUFFLGtCQUFrQixFQUFFLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IE1hdGVyaWFsTmVzdGVkQ29tcG9uZW50IH0gZnJvbSAnLi4vTWF0ZXJpYWxOZXN0ZWRDb21wb25lbnQnO1xuaW1wb3J0IENvbnRhaW5lckNvbXBvbmVudCBmcm9tICdmb3JtaW9qcy9jb21wb25lbnRzL2NvbnRhaW5lci9Db250YWluZXIuanMnO1xuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnbWF0LWZvcm1pby1jb250YWluZXInLFxuICB0ZW1wbGF0ZTogYFxuICAgIDxkaXYgZnhMYXlvdXQ9XCJjb2x1bW5cIiBmeExheW91dEdhcD1cIjFlbVwiPlxuICAgICAgPG5nLXRlbXBsYXRlICNjb21wb25lbnRzPjwvbmctdGVtcGxhdGU+XG4gICAgPC9kaXY+YFxufSlcbmV4cG9ydCBjbGFzcyBNYXRlcmlhbENvbnRhaW5lckNvbXBvbmVudCBleHRlbmRzIE1hdGVyaWFsTmVzdGVkQ29tcG9uZW50IHsgfVxuQ29udGFpbmVyQ29tcG9uZW50Lk1hdGVyaWFsQ29tcG9uZW50ID0gTWF0ZXJpYWxDb250YWluZXJDb21wb25lbnQ7XG5leHBvcnQgeyBDb250YWluZXJDb21wb25lbnQgfTtcbiJdfQ==

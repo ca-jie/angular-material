@@ -1,0 +1,24 @@
+import { Component } from '@angular/core';
+import { TEXTFIELD_TEMPLATE } from '../textfield/textfield.component';
+import { MaterialNumberComponent } from '../number/number.component';
+import CurrencyComponent from 'formiojs/components/currency/Currency.js';
+import _ from 'lodash';
+export class MaterialCurrencyComponent extends MaterialNumberComponent {
+    constructor() {
+        super(...arguments);
+        this.inputType = 'text';
+    }
+    onChange() {
+        const newValue = _.isNil(this.getValue()) ? '' : this.getValue();
+        this.instance.updateValue(newValue, { modified: true });
+    }
+}
+MaterialCurrencyComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'mat-formio-currency',
+                template: TEXTFIELD_TEMPLATE
+            },] }
+];
+CurrencyComponent.MaterialComponent = MaterialCurrencyComponent;
+export { CurrencyComponent };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3VycmVuY3kuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6Ii4uLy4uL3Byb2plY3RzL2FuZ3VsYXItbWF0ZXJpYWwtZm9ybWlvL3NyYy8iLCJzb3VyY2VzIjpbImxpYi9jb21wb25lbnRzL2N1cnJlbmN5L2N1cnJlbmN5LmNvbXBvbmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQzFDLE9BQU8sRUFBRSxrQkFBa0IsRUFBRSxNQUFNLGtDQUFrQyxDQUFDO0FBQ3RFLE9BQU8sRUFBRSx1QkFBdUIsRUFBRSxNQUFNLDRCQUE0QixDQUFDO0FBQ3JFLE9BQU8saUJBQWlCLE1BQU0sMENBQTBDLENBQUM7QUFDekUsT0FBTyxDQUFDLE1BQU0sUUFBUSxDQUFDO0FBTXZCLE1BQU0sT0FBTyx5QkFBMEIsU0FBUSx1QkFBdUI7SUFKdEU7O1FBS1MsY0FBUyxHQUFHLE1BQU0sQ0FBQztJQU01QixDQUFDO0lBSkMsUUFBUTtRQUNOLE1BQU0sUUFBUSxHQUFHLENBQUMsQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLFFBQVEsRUFBRSxDQUFDLENBQUMsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxDQUFDLENBQUMsSUFBSSxDQUFDLFFBQVEsRUFBRSxDQUFDO1FBQ2pFLElBQUksQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFFBQVEsRUFBRSxFQUFDLFFBQVEsRUFBRSxJQUFJLEVBQUMsQ0FBQyxDQUFDO0lBQ3hELENBQUM7OztZQVZGLFNBQVMsU0FBQztnQkFDVCxRQUFRLEVBQUUscUJBQXFCO2dCQUMvQixRQUFRLEVBQUUsa0JBQWtCO2FBQzdCOztBQVNELGlCQUFpQixDQUFDLGlCQUFpQixHQUFHLHlCQUF5QixDQUFDO0FBQ2hFLE9BQU8sRUFBRSxpQkFBaUIsRUFBRSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBURVhURklFTERfVEVNUExBVEUgfSBmcm9tICcuLi90ZXh0ZmllbGQvdGV4dGZpZWxkLmNvbXBvbmVudCc7XG5pbXBvcnQgeyBNYXRlcmlhbE51bWJlckNvbXBvbmVudCB9IGZyb20gJy4uL251bWJlci9udW1iZXIuY29tcG9uZW50JztcbmltcG9ydCBDdXJyZW5jeUNvbXBvbmVudCBmcm9tICdmb3JtaW9qcy9jb21wb25lbnRzL2N1cnJlbmN5L0N1cnJlbmN5LmpzJztcbmltcG9ydCBfIGZyb20gJ2xvZGFzaCc7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ21hdC1mb3JtaW8tY3VycmVuY3knLFxuICB0ZW1wbGF0ZTogVEVYVEZJRUxEX1RFTVBMQVRFXG59KVxuZXhwb3J0IGNsYXNzIE1hdGVyaWFsQ3VycmVuY3lDb21wb25lbnQgZXh0ZW5kcyBNYXRlcmlhbE51bWJlckNvbXBvbmVudCB7XG4gIHB1YmxpYyBpbnB1dFR5cGUgPSAndGV4dCc7XG5cbiAgb25DaGFuZ2UoKSB7XG4gICAgY29uc3QgbmV3VmFsdWUgPSBfLmlzTmlsKHRoaXMuZ2V0VmFsdWUoKSkgPyAnJyA6IHRoaXMuZ2V0VmFsdWUoKTtcbiAgICB0aGlzLmluc3RhbmNlLnVwZGF0ZVZhbHVlKG5ld1ZhbHVlLCB7bW9kaWZpZWQ6IHRydWV9KTtcbiAgfVxufVxuQ3VycmVuY3lDb21wb25lbnQuTWF0ZXJpYWxDb21wb25lbnQgPSBNYXRlcmlhbEN1cnJlbmN5Q29tcG9uZW50O1xuZXhwb3J0IHsgQ3VycmVuY3lDb21wb25lbnQgfTtcbiJdfQ==

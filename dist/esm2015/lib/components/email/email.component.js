@@ -1,0 +1,18 @@
+import { Component } from '@angular/core';
+import { MaterialTextfieldComponent, TEXTFIELD_TEMPLATE } from '../textfield/textfield.component';
+import EmailComponent from 'formiojs/components/email/Email.js';
+export class MaterialEmailComponent extends MaterialTextfieldComponent {
+    constructor() {
+        super(...arguments);
+        this.inputType = 'email';
+    }
+}
+MaterialEmailComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'mat-formio-email',
+                template: TEXTFIELD_TEMPLATE
+            },] }
+];
+EmailComponent.MaterialComponent = MaterialEmailComponent;
+export { EmailComponent };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZW1haWwuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6Ii4uLy4uL3Byb2plY3RzL2FuZ3VsYXItbWF0ZXJpYWwtZm9ybWlvL3NyYy8iLCJzb3VyY2VzIjpbImxpYi9jb21wb25lbnRzL2VtYWlsL2VtYWlsLmNvbXBvbmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQzFDLE9BQU8sRUFBRSwwQkFBMEIsRUFBRSxrQkFBa0IsRUFBRSxNQUFNLGtDQUFrQyxDQUFDO0FBQ2xHLE9BQU8sY0FBYyxNQUFNLG9DQUFvQyxDQUFDO0FBS2hFLE1BQU0sT0FBTyxzQkFBdUIsU0FBUSwwQkFBMEI7SUFKdEU7O1FBS1MsY0FBUyxHQUFHLE9BQU8sQ0FBQztJQUM3QixDQUFDOzs7WUFOQSxTQUFTLFNBQUM7Z0JBQ1QsUUFBUSxFQUFFLGtCQUFrQjtnQkFDNUIsUUFBUSxFQUFFLGtCQUFrQjthQUM3Qjs7QUFJRCxjQUFjLENBQUMsaUJBQWlCLEdBQUcsc0JBQXNCLENBQUM7QUFDMUQsT0FBTyxFQUFFLGNBQWMsRUFBRSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBNYXRlcmlhbFRleHRmaWVsZENvbXBvbmVudCwgVEVYVEZJRUxEX1RFTVBMQVRFIH0gZnJvbSAnLi4vdGV4dGZpZWxkL3RleHRmaWVsZC5jb21wb25lbnQnO1xuaW1wb3J0IEVtYWlsQ29tcG9uZW50IGZyb20gJ2Zvcm1pb2pzL2NvbXBvbmVudHMvZW1haWwvRW1haWwuanMnO1xuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnbWF0LWZvcm1pby1lbWFpbCcsXG4gIHRlbXBsYXRlOiBURVhURklFTERfVEVNUExBVEVcbn0pXG5leHBvcnQgY2xhc3MgTWF0ZXJpYWxFbWFpbENvbXBvbmVudCBleHRlbmRzIE1hdGVyaWFsVGV4dGZpZWxkQ29tcG9uZW50IHtcbiAgcHVibGljIGlucHV0VHlwZSA9ICdlbWFpbCc7XG59XG5FbWFpbENvbXBvbmVudC5NYXRlcmlhbENvbXBvbmVudCA9IE1hdGVyaWFsRW1haWxDb21wb25lbnQ7XG5leHBvcnQgeyBFbWFpbENvbXBvbmVudCB9O1xuIl19
