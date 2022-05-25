@@ -39,7 +39,6 @@ export class MaterialDateComponent extends MaterialComponent {
         }
     }
     onChangeDate(event) {
-        console.log('change date =>', event);
         this.selectedDate = momentDate(event).utc().format();
         this.control.setValue(this.selectedDate);
         this.setDateTime();
