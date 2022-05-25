@@ -1034,7 +1034,6 @@ class MaterialDateComponent extends MaterialComponent {
         }
     }
     onChangeDate(event) {
-        console.log('date change=>', event);
         this.selectedDate = momentDate(event).utc().format();
         this.control.setValue(this.selectedDate);
         this.setDateTime();
@@ -1164,7 +1163,6 @@ class MaterialDateComponent extends MaterialComponent {
     clickOutside(event) {
         if (!this.calendar.element.nativeElement.contains(event.target) && this.isPickerOpened)
             this.toggleCalendar(event);
-            console.log('s');
     }
     improveMinMaxDate(minDate, maxDate) {
         if (minDate && minDate.length === 4) {
