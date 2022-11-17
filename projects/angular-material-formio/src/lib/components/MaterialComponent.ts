@@ -29,7 +29,12 @@ export class MaterialComponent implements AfterViewInit, OnInit {
         this.storeFormData();
         this.validateOnInit();
       }
-      this.instance.component.defaultValue ? this.setValue(this.instance.component.defaultValue) : '';
+
+      if (this.instance.component.type === 'select') {
+        this.instance.component.defaultValue ? this.setValue(!isNaN(this.instance.component.defaultValue) ? parseFloat(this.instance.component.defaultValue) : this.instance.component.defaultValue) : '';
+      } else {
+        this.instance.component.defaultValue ? this.setValue(this.instance.component.defaultValue) : '';
+      }
     }
   }
 
